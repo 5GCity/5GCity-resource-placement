@@ -1,0 +1,559 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "placement": {
+      "type": "object",
+      "properties": {
+        "vnfs": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "node": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "name",
+                "node",
+                "image"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "node": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "name",
+                "node",
+                "image"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "node": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "name",
+                "node",
+                "image"
+              ]
+            }
+          ]
+        },
+        "vlinks": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "src_vnf": {
+                  "type": "string"
+                },
+                "src_node": {
+                  "type": "string"
+                },
+                "dest_vnf": {
+                  "type": "string"
+                },
+                "dest_node": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "src_vnf",
+                "src_node",
+                "dest_vnf",
+                "dest_node"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "src_vnf": {
+                  "type": "string"
+                },
+                "src_node": {
+                  "type": "string"
+                },
+                "dest_vnf": {
+                  "type": "string"
+                },
+                "dest_node": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "src_vnf",
+                "src_node",
+                "dest_vnf",
+                "dest_node"
+              ]
+            }
+          ]
+        },
+        "cpu_oversub": {
+          "type": "array",
+          "items": {}
+        },
+        "mem_oversub": {
+          "type": "array",
+          "items": {}
+        },
+        "alloc_node_res": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "node": {
+                  "type": "string"
+                },
+                "cpu": {
+                  "type": "integer"
+                },
+                "mem": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "name",
+                "node",
+                "cpu",
+                "mem"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "node": {
+                  "type": "string"
+                },
+                "cpu": {
+                  "type": "integer"
+                },
+                "mem": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "name",
+                "node",
+                "cpu",
+                "mem"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "node": {
+                  "type": "string"
+                },
+                "cpu": {
+                  "type": "integer"
+                },
+                "mem": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "name",
+                "node",
+                "cpu",
+                "mem"
+              ]
+            }
+          ]
+        },
+        "flows": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "arc": {
+                  "type": "string"
+                },
+                "src_node": {
+                  "type": "string"
+                },
+                "dst_node": {
+                  "type": "string"
+                },
+                "src_vnf": {
+                  "type": "string"
+                },
+                "dest_vnf": {
+                  "type": "string"
+                },
+                "flow_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "arc",
+                "src_node",
+                "dst_node",
+                "src_vnf",
+                "dest_vnf",
+                "flow_id"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "arc": {
+                  "type": "string"
+                },
+                "src_node": {
+                  "type": "string"
+                },
+                "dst_node": {
+                  "type": "string"
+                },
+                "src_vnf": {
+                  "type": "string"
+                },
+                "dest_vnf": {
+                  "type": "string"
+                },
+                "flow_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "arc",
+                "src_node",
+                "dst_node",
+                "src_vnf",
+                "dest_vnf",
+                "flow_id"
+              ]
+            }
+          ]
+        },
+        "links": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "arc": {
+                  "type": "string"
+                },
+                "edge_src": {
+                  "type": "string"
+                },
+                "edge_dst": {
+                  "type": "string"
+                },
+                "link_src": {
+                  "type": "string"
+                },
+                "link_dst": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "arc",
+                "edge_src",
+                "edge_dst",
+                "link_src",
+                "link_dst"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "arc": {
+                  "type": "string"
+                },
+                "edge_src": {
+                  "type": "string"
+                },
+                "edge_dst": {
+                  "type": "string"
+                },
+                "link_src": {
+                  "type": "string"
+                },
+                "link_dst": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "arc",
+                "edge_src",
+                "edge_dst",
+                "link_src",
+                "link_dst"
+              ]
+            }
+          ]
+        },
+        "dr_oversub": {
+          "type": "array",
+          "items": {}
+        }
+      },
+      "required": [
+        "vnfs",
+        "vlinks",
+        "cpu_oversub",
+        "mem_oversub",
+        "alloc_node_res",
+        "flows",
+        "links",
+        "dr_oversub"
+      ]
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "num_instances": {
+          "type": "integer"
+        },
+        "max_cpu_oversub": {
+          "type": "integer"
+        },
+        "max_mem_oversub": {
+          "type": "integer"
+        },
+        "changed": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "node": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "node"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "node": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "node"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "node": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "node"
+              ]
+            }
+          ]
+        },
+        "num_changed": {
+          "type": "integer"
+        },
+        "path_delays": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "src": {
+                  "type": "string"
+                },
+                "dest": {
+                  "type": "string"
+                },
+                "src_node": {
+                  "type": "string"
+                },
+                "dest_node": {
+                  "type": "string"
+                },
+                "path_delay": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "src",
+                "dest",
+                "src_node",
+                "dest_node",
+                "path_delay"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "src": {
+                  "type": "string"
+                },
+                "dest": {
+                  "type": "string"
+                },
+                "src_node": {
+                  "type": "string"
+                },
+                "dest_node": {
+                  "type": "string"
+                },
+                "path_delay": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "src",
+                "dest",
+                "src_node",
+                "dest_node",
+                "path_delay"
+              ]
+            }
+          ]
+        },
+        "vnf_delays": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "vnf": {
+                  "type": "string"
+                },
+                "vnf_delay": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "vnf",
+                "vnf_delay"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "vnf": {
+                  "type": "string"
+                },
+                "vnf_delay": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "vnf",
+                "vnf_delay"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "vnf": {
+                  "type": "string"
+                },
+                "vnf_delay": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "vnf",
+                "vnf_delay"
+              ]
+            }
+          ]
+        },
+        "total_path_delay": {
+          "type": "integer"
+        },
+        "total_vnf_delay": {
+          "type": "integer"
+        },
+        "max_endToEnd_delay": {
+          "type": "integer"
+        },
+        "total_delay": {
+          "type": "integer"
+        },
+        "max_dr_oversub": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "num_instances",
+        "max_cpu_oversub",
+        "max_mem_oversub",
+        "changed",
+        "num_changed",
+        "path_delays",
+        "vnf_delays",
+        "total_path_delay",
+        "total_vnf_delay",
+        "max_endToEnd_delay",
+        "total_delay",
+        "max_dr_oversub"
+      ]
+    },
+    "id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "placement",
+    "metrics",
+    "id"
+  ]
+}

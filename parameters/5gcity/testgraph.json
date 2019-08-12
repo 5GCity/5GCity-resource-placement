@@ -1,0 +1,70 @@
+{
+    "directed": false, 
+    "graph": {
+        "node_default": {}, 
+        "edge_default": {}
+    }, 
+    "nodes": [
+        {
+            "mem": 2,
+            "cpu": 2,
+            "id": 0
+        }, 
+        {
+            "mem": 4, 
+            "cpu": 16, 
+            "id": 1
+        }, 
+        {
+            "mem": 8, 
+            "cpu": 32, 
+            "id": 2
+        }, 
+        {
+            "mem": 8, 
+            "cpu": 32, 
+            "id": 3
+        }, 
+        {
+            "mem": 16, 
+            "cpu": 16, 
+            "id": 4
+        }, 
+        {
+            "mem": 16, 
+            "cpu": 48, 
+            "id": 5
+        }
+    ], 
+    "links": [
+        {
+            "source": 0, 
+            "target": 1
+        }, 
+        {
+            "source": 0, 
+            "target": 2
+        }, 
+        {
+            "source": 1, 
+            "target": 3
+        }, 
+        {
+            "source": 2, 
+            "target": 5
+        }, 
+        {
+            "source": 3, 
+            "target": 4
+        }, 
+        {
+            "source": 3, 
+            "target": 5
+        }, 
+        {
+            "source": 4, 
+            "target": 5
+        }
+    ], 
+    "multigraph": false
+}

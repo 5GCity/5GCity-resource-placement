@@ -1,0 +1,58 @@
+nsd:nsd-catalog:
+  nsd:
+  - constituent-vnfd:
+    - member-vnf-index: '1'
+      start-by-default: 'true'
+      vnfd-id-ref: a86a284e-e369-4d7d-a465-57ddc6e8c027
+    - member-vnf-index: '2'
+      start-by-default: 'true'
+      vnfd-id-ref: ae333a44-6587-4940-b442-c029376bbb2e
+    id: ac56bfd0-4f86-4f6b-b801-8fca2f638be8
+    logo: 5GCityLogo.png
+    name: 5GCITY-REVIEW-NS1
+    short-name: 5GCITY-REVIEW-NS1
+    vendor: NXW
+    vld:
+    - id: vld-1
+      mgmt-network: 'true'
+      name: Management_net
+      short-name: Management_net
+      type: ELAN
+      vim-network-name: VM-MGMT-NET-KD
+      vnfd-connection-point-ref:
+      - member-vnf-index-ref: '1'
+        vnfd-connection-point-ref: cp-1
+        vnfd-id-ref: a86a284e-e369-4d7d-a465-57ddc6e8c027
+    - id: vld-2
+      mgmt-network: 'false'
+      name: video_processing_net
+      short-name: video_processing_net
+      type: ELAN
+      vim-network-name: 5gcity_net1
+      vnfd-connection-point-ref:
+      - member-vnf-index-ref: '1'
+        vnfd-connection-point-ref: cp-2
+        vnfd-id-ref: a86a284e-e369-4d7d-a465-57ddc6e8c027
+      - member-vnf-index-ref: '2'
+        vnfd-connection-point-ref: cp-1
+        vnfd-id-ref: ae333a44-6587-4940-b442-c029376bbb2e
+    - id: vld-3
+      mgmt-network: 'false'
+      name: External_net
+      short-name: External_net
+      type: ELAN
+      vim-network-name: VM-DATA-NET-KD
+      vnfd-connection-point-ref:
+      - member-vnf-index-ref: '1'
+        vnfd-connection-point-ref: cp-3
+        vnfd-id-ref: a86a284e-e369-4d7d-a465-57ddc6e8c027
+    - id: vld-4
+      mgmt-network: 'false'
+      name: Central_service_net
+      short-name: Central_service_net
+      type: ELAN
+      vim-network-name: 5gcity_net2
+      vnfd-connection-point-ref:
+      - member-vnf-index-ref: '1'
+        vnfd-connection-point-ref: cp-4
+        vnfd-id-ref: a86a284e-e369-4d7d-a465-57ddc6e8c027

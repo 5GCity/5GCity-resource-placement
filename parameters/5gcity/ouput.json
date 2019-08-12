@@ -1,0 +1,145 @@
+{
+    "placement": {
+        "vnfs": [
+            {
+                "name": "vnf_fw1",
+                "node": "pop1"
+            },
+            {
+                "name": "vnf_user",
+                "node": "pop0"
+            },
+            {
+                "name": "vnf_web",
+                "node": "pop3"
+            }
+        ],
+        "vlinks": [
+            {
+                "src_vnf": "vnf_fw1",
+                "src_node": "pop1",
+                "dest_vnf": "vnf_web",
+                "dest_node": "pop3"
+            },
+            {
+                "src_vnf": "vnf_user",
+                "src_node": "pop0",
+                "dest_vnf": "vnf_fw1",
+                "dest_node": "pop1"
+            }
+        ],
+        "cpu_oversub": [],
+        "mem_oversub": [],
+        "dr_oversub": [],
+        "alloc_node_res": [
+            {
+                "name": "vnf_fw1",
+                "node": "pop1",
+                "cpu": 8,
+                "mem": 4
+            },
+            {
+                "name": "vnf_user",
+                "node": "pop0",
+                "cpu": 2,
+                "mem": 2
+            },
+            {
+                "name": "vnf_web",
+                "node": "pop3",
+                "cpu": 8,
+                "mem": 8
+            }
+        ],
+        "flows": [
+            {
+                "arc": "vnf_fw1.0->vnf_web.0",
+                "src_node": "pop1",
+                "dst_node": "pop3",
+                "src_vnf": "vnf_fw1",
+                "dest_vnf": "vnf_web",
+                "flow_id": "f1"
+            },
+            {
+                "arc": "vnf_user.0->vnf_fw1.0",
+                "src_node": "pop0",
+                "dst_node": "pop1",
+                "src_vnf": "vnf_user",
+                "dest_vnf": "vnf_fw1",
+                "flow_id": "f1"
+            }
+        ],
+        "links": [
+            {
+                "arc": "vnf_fw1.0->vnf_web.0",
+                "edge_src": "pop1",
+                "edge_dst": "pop3",
+                "link_src": "pop1",
+                "link_dst": "pop3"
+            },
+            {
+                "arc": "vnf_user.0->vnf_fw1.0",
+                "edge_src": "pop0",
+                "edge_dst": "pop1",
+                "link_src": "pop0",
+                "link_dst": "pop1"
+            }
+        ]
+    },
+    "metrics": {
+        "num_instances": 3,
+        "max_cpu_oversub": 0,
+        "max_mem_oversub": 0,
+        "changed": [
+            {
+                "name": "vnf_fw1",
+                "node": "pop1"
+            },
+            {
+                "name": "vnf_user",
+                "node": "pop0"
+            },
+            {
+                "name": "vnf_web",
+                "node": "pop3"
+            }
+        ],
+        "num_changed": 3,
+        "path_delays": [
+            {
+                "src": "vnf_fw1",
+                "dest": "vnf_web",
+                "src_node": "pop1",
+                "dest_node": "pop3",
+                "path_delay": 0
+            },
+            {
+                "src": "vnf_user",
+                "dest": "vnf_fw1",
+                "src_node": "pop0",
+                "dest_node": "pop1",
+                "path_delay": 0
+            }
+        ],
+        "vnf_delays": [
+            {
+                "vnf": "vnf_fw1",
+                "vnf_delay": 35
+            },
+            {
+                "vnf": "vnf_user",
+                "vnf_delay": 0
+            },
+            {
+                "vnf": "vnf_web",
+                "vnf_delay": 20
+            }
+        ],
+        "total_path_delay": 0,
+        "total_vnf_delay": 55,
+        "max_endToEnd_delay": 55,
+        "total_delay": 55,
+        "max_dr_oversub": 0
+    },
+    "id": "7da2d000-b104-4c52-93b5-64863a01a3b3"
+}

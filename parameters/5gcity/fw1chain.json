@@ -1,0 +1,78 @@
+{
+    "vnfs": [
+        {
+            "name": "vnf_user",
+            "inputs_fwd": 0,
+            "inputs_bwd": 0,
+            "outputs_fwd": 1,
+            "outputs_bwd": 0,
+            "out_fwd": [],
+            "out_bwd": [],
+            "mem": [2],
+            "cpu": [2],
+            "vnf_delay": 0,
+            "stateful": false,
+            "type": "source"
+        },
+        {
+            "name": "vnf_fw1",
+            "inputs_fwd": 1,
+            "inputs_bwd": 0,
+            "outputs_fwd": 1,
+            "outputs_bwd": 0,
+            "out_fwd": [[1, 0]],
+            "out_bwd": [],
+            "mem": [4,32],
+            "cpu": [8,16],
+            "vnf_delay": 35,
+            "stateful": false,
+            "type": "normal"
+
+        },
+        {
+            "name": "vnf_web",
+            "inputs_fwd": 1,
+            "inputs_bwd": 0,
+            "outputs_fwd": 0,
+            "outputs_bwd": 0,
+            "mem": [8,0],
+            "cpu": [8,0],
+            "out_fwd": [],
+            "out_bwd": [],
+            "vnf_delay": 20,
+            "stateful": false,
+            "type": "normal"
+        }
+    ],
+    "name": "fw1chain",
+    "vlinks": [
+        {
+            "dest": "vnf_fw1",
+            "src": "vnf_user",
+            "direction": "forward",
+            "dest_input": 0,
+            "src_output": 0,
+            "max_delay": 50
+        },
+        {
+            "dest": "vnf_web",
+            "src": "vnf_fw1",
+            "direction": "forward",
+            "dest_input": 0,
+            "src_output": 0,
+            "max_delay": 50
+        }
+    ],
+    "source": [
+      {
+          "node": "pop0",
+          "vnf": "vnf_user",
+          "flows": [
+              {
+                  "data_rate": 1,
+                  "id": "f1"
+              }
+          ]
+        }
+    ]
+}
