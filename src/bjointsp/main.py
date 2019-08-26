@@ -22,7 +22,7 @@ import bjointsp.api.placement as placement
 
 # Start the placement server
 def main():
-    placement.api.app.run(host='localhost', port=3800, debug=True)
+    placement.api.app.run(host='0.0.0.0', port=3800, debug=True)
 
 if __name__ == '__main__':
     main()
